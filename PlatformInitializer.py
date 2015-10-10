@@ -4,37 +4,45 @@ __author__ = 'Ivan'
 class ComponentInitializer:
 
     @property
-    def componentMatrix(self): return self
+    def num_platforms(self): return self
     @property
-    def platformMatrix(self): return self
+    def num_platforms(self): return self
+
     @property
-    def resourceMatrix(self): return self
+    def component_matrix(self): return self
     @property
-    def numberOfComponents(self): return self
+    def platform_matrix(self): return self
     @property
-    def numberOfPlatforms(self): return self
+    def resource_matrix(self): return self
+    @property
+    def resource_availabilty_matrix(self): return self
+    @property
+    def pairwise_matrix(self): return self
+    @property
+    def bandwith_matrix(self): return self
+
+    @property
+    def trade_off_vector_f(self): return self
+
     @property
     def qu(self): return self
-    @property
-    def tradeOffMatrixF(self): return self
-    @property
-    def resourceAvailabilty(self): return self
+
     @property
     def verbose(self): return self
 
     '''
     initialize - used to setup the input matrices
     '''
-    def initialize(self, numberOfComponents, numberOfPlatforms, minWeight, maxWeight, verbose = False):
+    def initialize(self, num_components, num_platforms, min_weight, max_weight, verbose = False):
         self.verbose = verbose;
 
         if verbose:
             print "Starting matrix initialization..."
 
-        self.numberOfPlatforms = numberOfPlatforms
-        self.numberOfComponents = numberOfComponents
+        self.num_components = num_components
+        self.num_platforms = num_platforms
 
-        self.componentMatrix = [[0,1,0,0,0,0,0,0,0,0,0],
+        self.component_matrix = [[0,1,0,0,0,0,0,0,0,0,0],
                                 [1,0,5,0,3,0,0,0,0,0,0],
                                 [0,5,0,5,3,0,0,0,0,0,0],
                                 [0,0,5,0,0,1,3,7,0,0,0],
@@ -46,13 +54,13 @@ class ComponentInitializer:
                                 [0,0,0,0,0,7,0,0,0,0,0],
                                 [0,0,0,0,0,0,7,0,0,0,0]]
 
-        self.platformMatrix = [[1,5,5,4],
+        self.platform_matrix = [[1,5,5,4],
                                [5,1,2,3],
                                [5,2,1,3],
                                [4,3,3,1]]
 
 
-        self.resourceMatrix =  [[ #0 depth - execution time
+        self.resource_matrix =  [[ #0 depth - execution time
                                   [10,50,30,10,20,20,90,20,20,20,90],
                                   [90,20,20,40,40,50,20,10,10,15,10],
                                   [90,20,20,40,40,50,20,10,10,15,10],
@@ -68,18 +76,18 @@ class ComponentInitializer:
                                   [18,4,4,8,8,10,4,2,2,3,2],
                                   [11,14,14,14,14,11,3,14,14,14,7]]]
 
-        self.resourceAvailabilty = [[100,150,150,100],
+        self.resource_availabilty_matrix = [[100,150,150,100],
                                     [256,640,640,256],
                                     [50,25,25,15]]
 
-        ##self.tradeOffMatrixF =  [10,1] # append
+        self.trade_off_vector_f =  [10,1] # append
 
-        self.pairwiseMatrix = [[1, 3, 0.1429, 3],
+        self.pairwise_matrix = [[1, 3, 0.1429, 3],
                                [0.3333,1,0.1111,3],
                                [7,9,1,9],
                                [0.3333,0.3333,0.1111,1]]
 
-        self.bandwithMatrix = [ [1, 50, 50, 50],
+        self.bandwith_matrix = [ [1, 50, 50, 50],
                                 [50, 1, 50, 50],
                                 [50, 50, 1, 50],
                                 [50, 50, 50, 1]]
