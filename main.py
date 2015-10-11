@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     #local vars
     nComponents = 11
-    nUnits = 3
+    nUnits = 4
 
     #initialize input
     initializer = pinit.ComponentInitializer()
@@ -28,19 +28,22 @@ if __name__ == '__main__':
     mat_bandwidth = initializer.bandwith_matrix
 
     #calculate the eignenvector
-    vec_trade_off_f = calc.eigenvector(initializer.pairwise_matrix, True)
+    vec_trade_off_f = calc.eigenvector(initializer.pairwise_matrix)
 
-    solver = slv.Solver(nComponents, nUnits, vec_trade_off_f, initializer.component_matrix, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
+    solver = slv.Solver(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
     result = solver.solve_by_genetic_algorithm(True, True)
+
+    solver.manual_fitness(result["result"])
 
     # print result
     print "****************** R E S U L T ********************"
     print "Method: ", result["method"]
     print "Result: ", result["result"]
-    print "Score: - final:", result["score"][0], ", communication ", result["score"][1], ", res ", result["score"][2]
+    print "Score: ", result["score"][0], ", communication ", result["score"][1], ", res ", result["score"][2]
     print "Skipping all on one: ", result["type"]
     print "Runtime: ", result["time"]
     print "Solution space: ", nUnits, "^", nComponents, " = ", pow(nUnits, nComponents)
+    print "Solution valid: ", solver.is_solution_valid(result["result"], True)
     print "***************************************************"
 
 
