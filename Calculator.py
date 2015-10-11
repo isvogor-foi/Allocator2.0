@@ -17,40 +17,37 @@ class Calculator:
                 res.append((depth / (depth.max() * 1.0)).tolist())
         else:
             res.append((temp / (temp.max() * 1.0)).tolist())
+            res = res[0]
 
         if verbose:
             print "Dimensions: " + str(temp.ndim)
             print res
 
         return res
+
     #end method normalize
 
-    def eigenvector(self, matrix):
-
+    def eigenvector(self, matrix, verbose = False):
+        # calculate eigenvector and eigenvalue
         eigenvalues, eigenvectors = la.eig(matrix)
-        b = max(eigenvalues)
+        # principal eigenvalue is max eigenvalue
+        principal_eigenvalue = max(eigenvalues)
+        eigenvalue_real_part = principal_eigenvalue.real
 
-        index = -1
-        for i in range(0, len(eigenvalues)):
-            if eigenvalues[i] == b:
-                index = i
+        trade_off_vector = []
+        for i in range(0, len(eigenvectors[0])):
+            trade_off_vector.append(eigenvectors[i][0].real)
 
-        self.eigenvalue = b.real
+        sumVal = sum(trade_off_vector)
 
-        self.tradeOffMatrixF = []
-        for j in range(0, len(eigenvectors[0])):
-            self.tradeOffMatrixF.append(eigenvectors[j][0].real)
+        # normalize so the sum equals 1
+        trade_off_vector = [trade_off_vector[i] / float(sumVal) for i in range(0, len(trade_off_vector))]
 
-        self.eigenvector = copy.deepcopy(self.tradeOffMatrixF)
+        if verbose:
+            print "final vector F: ", trade_off_vector
+            print "final eigenvalue: ", eigenvalue_real_part
 
-        sumVal = sum(self.tradeOffMatrixF)
-
-        # normalize (sum = 1)
-        for i in range(0,len(self.tradeOffMatrixF)):
-            self.tradeOffMatrixF[i] = self.tradeOffMatrixF[i] / float(sumVal)
-
-        print "final vector F: ", self.tradeOffMatrixF
-        print "final eigenvalue: ", self.eigenvalue
+        return trade_off_vector
     #end method eigenvector
 
 # end class Normalizer
