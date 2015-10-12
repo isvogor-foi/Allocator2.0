@@ -60,6 +60,11 @@ class Solver:
         self.forbidden_matrix = forbidden_matrix
         self.synergy_matrix = synergy_matrix
 
+    def solve_by_simulated_annealing(self):
+        pass
+
+
+    # discrete values
     def solve_by_genetic_algorithm(self, skip_same_platform = True, verbose = False):
         startTime = datetime.now();
 
@@ -107,10 +112,11 @@ class Solver:
             g = 0
 
         # communication
-        for m in range(0,len(result)):
-            for n in range (m,len(result)):
+        for m in range(0, len(result)):
+            for n in range(m, len(result)):
                 if m != n and self.mat_norm_components[m][n] != 0:
                     communication_weight += self.mat_norm_components[m][n] * self.mat_norm_units[result[m]][result[n]]
+
 
         # communication * trade off
         communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
@@ -125,13 +131,24 @@ class Solver:
             return [weight, communication_weight, resource_weight]
     # end method fitness_function
 
+
+    #TODO: update fitness_function when this is done
+    #TODO: try simulated annealing scipy.optimize
     def manual_fitness(self, result):
         g, resource_weight, communication_weight = 0, 0, 0
+        resource_weight_2 = 0
 
         #resources
         for component, allocated_to in enumerate(result):
             for resource in range(len(self.vec_trade_off_f) - 1):
                 resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
+                resource_weight_2 += self.mat_norm_resources[resource][allocated_to][component] \
+                                     * self.vec_trade_off_f[resource] \
+                                     * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
+
+                print round(self.mat_norm_resources[resource][allocated_to][component], 4), " * ", \
+                    round(self.vec_trade_off_f[resource], 4), " * ", \
+                    self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to
 
         # communication
         for m in range(0, len(result)):
@@ -142,6 +159,8 @@ class Solver:
         # communication * trade off
         communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
 
+
+        print resource_weight_2
         print resource_weight
         print communication_weight
     #end manual fitness

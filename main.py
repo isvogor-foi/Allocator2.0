@@ -40,10 +40,7 @@ if __name__ == '__main__':
     mock_solution_good = [0, 2, 2, 0, 0, 0, 3, 1, 1, 2, 1]
     mock_solution_bad = [3, 2, 2, 0, 0, 0, 3, 1, 1, 1, 1]
 
-    solver.is_preference_valid(mock_solution_bad)
-    solver.is_mandatory_valid(mock_solution_bad)
-    solver.is_forbidden_valid(mock_solution_bad)
-
+    #solver.manual_fitness(result["result"])
 
     # print result
     print "****************** R E S U L T ********************"
