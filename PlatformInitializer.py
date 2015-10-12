@@ -20,6 +20,14 @@ class ComponentInitializer:
     def pairwise_matrix(self): return self
     @property
     def bandwith_matrix(self): return self
+    @property
+    def preference_matrix(self): return self
+    @property
+    def mandatory_matrix(self): return self
+    @property
+    def forbidden_matrix(self): return self
+    @property
+    def synergy_matrix(self): return self
 
     @property
     def trade_off_vector_f(self): return self
@@ -31,7 +39,7 @@ class ComponentInitializer:
     def verbose(self): return self
 
     '''
-    initialize - used to setup the input matrices
+        initialize - used to setup the input matrices, currently has mock data
     '''
     def initialize(self, num_components, num_platforms, min_weight, max_weight, verbose = False):
         self.verbose = verbose;
@@ -91,6 +99,57 @@ class ComponentInitializer:
                                 [50, 1, 50, 50],
                                 [50, 50, 1, 50],
                                 [50, 50, 50, 1]]
+
+        # 1 if must not be allocated to
+
+        self.preference_matrix = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                  [1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0]]
+
+        # 1 if must be together
+
+        self.mandatory_matrix = [[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+        # 1 if must be separated
+
+        self.forbidden_matrix = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+                                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+        self.synergy_matrix = [[ #0 depth - execution time
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+                                [ #1 depth - memory
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]],
+                                [ #2 depth - energy
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                                  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]]]
 
         if verbose:
             print "Matrix initialization done!"
