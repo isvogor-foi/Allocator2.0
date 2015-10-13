@@ -34,18 +34,24 @@ if __name__ == '__main__':
     solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
 
     results = []
-    for i in range(0, 100):
+    for i in range(0, 5):
         result = solver.solve_by_genetic_algorithm()
-        results.append(result)
-        print("- % -", i)
+        results.append([result["result"], result["time"]])
+        print("- %s -", i)
     #result = solver.solve_by_genetic_algorithm(True, True)
+
+    f = open('results_deap.txt','w')
+    for r in results:
+        string = str(r[0]) + ", " + str(r[1]) + ", " + str(result["score"][0]) + "\n"
+        f.write(string) # python will convert \n to os.linesep
+    f.close()
 
     #solver.manual_fitness(result["result"])
 
     mock_solution_good = [0, 2, 2, 0, 0, 0, 3, 1, 1, 2, 1]
     mock_solution_bad = [3, 2, 2, 0, 0, 0, 3, 1, 1, 1, 1]
 
-    #solver.manual_fitness(result["result"])
+    solver.manual_fitness(result["result"])
 
     # print result
     print ("****************** R E S U L T ********************")
