@@ -1,8 +1,6 @@
-__author__ = 'Ivan'
+__author__ = 'ivan'
 
 import numpy as np
-import copy
-
 from scipy import linalg as la
 
 class Calculator:
@@ -20,8 +18,8 @@ class Calculator:
             res = res[0]
 
         if verbose:
-            print "Dimensions: " + str(temp.ndim)
-            print res
+            print ("Dimensions: " + str(temp.ndim))
+            print (res)
 
         return res
 
@@ -44,10 +42,8 @@ class Calculator:
         trade_off_vector = [trade_off_vector[i] / float(sumVal) for i in range(0, len(trade_off_vector))]
 
         if verbose:
-            print "final vector F: ", trade_off_vector
-            print "final eigenvalue: ", eigenvalue_real_part
+            print ("final vector F: ", trade_off_vector)
+            print ("final eigenvalue: ", eigenvalue_real_part)
 
         return trade_off_vector
     #end method eigenvector
-
-# end class Normalizer

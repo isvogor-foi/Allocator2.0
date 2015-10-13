@@ -1,47 +1,15 @@
-__author__ = 'Ivan'
+__author__ = 'ivan'
 
-from pyevolve import *
-from pyevolve import G1DList
-from pyevolve import GSimpleGA
+
+#from pyevolve import *
+#from pyevolve import G1DList
+#from pyevolve import GSimpleGA
 from datetime import *
 import itertools
 from operator import le
 
 
 class Solver:
-
-    @property
-    def number_of_components(self): return self
-    @property
-    def number_of_units(self): return self
-    @property
-    def vec_trade_off_f(self): return self
-    @property
-    def component_matrix(self): return self
-    @property
-    def mat_norm_components(self): return self
-    @property
-    def mat_norm_units(self): return self
-    @property
-    def mat_norm_resources(self): return self
-    @property
-    def resource_matrix(self): return self
-    @property
-    def resource_availability(self): return self
-    @property
-    def unit_matrix(self): return self
-
-    # architectural constraints
-    @property
-    def preference_matrix(self): return self
-    @property
-    def mandatory_matrix(self): return self
-    @property
-    def forbidden_matrix(self): return self
-
-    # synergy effect matrix
-    @property
-    def synergy_matrix(self): return self
 
     def __init__(self, number_of_components, number_of_units, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, resource_matrix, resource_availability, unit_matrix):
         self.number_of_components = number_of_components
@@ -66,39 +34,7 @@ class Solver:
 
     # discrete values
     def solve_by_genetic_algorithm(self, skip_same_platform = True, verbose = False):
-        startTime = datetime.now();
-
-        genome = G1DList.G1DList(self.number_of_components)
-        genome.setParams(rangemin = 0, rangemax = self.number_of_units - 1)
-        genome.evaluator.set(self.fitness_function)
-
-        ga = GSimpleGA.GSimpleGA(genome)
-        ga.setMinimax(Consts.minimaxType["minimize"])
-        #ga.setInteractiveMode(False)
-        ga.setGenerations(50)
-        ga.setMutationRate(0.05)
-        ga.setCrossoverRate(0.95)
-        ga.setPopulationSize(50)
-        ga.selector.set(Selectors.GRouletteWheel)
-
-        #ga.setMultiProcessing(True)
-        ga.evolve(freq_stats = 0)
-        # end time measuring
-        endTime = datetime.now()
-        best = ga.bestIndividual()
-        #minWeight = ga.bestIndividual().getFitnessScore()
-
-        result = []
-        for i in best:
-            result.append(i)
-
-        res = {"result": result,
-               "score": self.fitness_function(result, False),
-               "type":skip_same_platform,
-               "time":endTime-startTime,
-               "method": "Genetic Algorithm"}
-
-        return res
+       pass
     # end method solve_by_genetic_algorithm
 
     def fitness_function(self, result, shorter=True):
@@ -146,9 +82,9 @@ class Solver:
                                      * self.vec_trade_off_f[resource] \
                                      * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
 
-                print round(self.mat_norm_resources[resource][allocated_to][component], 4), " * ", \
+                print (round(self.mat_norm_resources[resource][allocated_to][component], 4), " * ", \
                     round(self.vec_trade_off_f[resource], 4), " * ", \
-                    self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to
+                    self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to)
 
         # communication
         for m in range(0, len(result)):
@@ -160,9 +96,9 @@ class Solver:
         communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
 
 
-        print resource_weight_2
-        print resource_weight
-        print communication_weight
+        print (resource_weight_2)
+        print (resource_weight)
+        print (communication_weight)
     #end manual fitness
 
     def is_solution_valid(self, solution, verbose=False):
@@ -176,8 +112,8 @@ class Solver:
                 resource_demand[resource][allocated_to] += self.resource_matrix[resource][allocated_to][component]
 
         if verbose:
-            print "\n Resource demand: ", resource_demand
-            print " Resource availability: ", self.resource_availability
+            print ("\n Resource demand: ", resource_demand)
+            print (" Resource availability: ", self.resource_availability)
 
         if all(map(le, list(itertools.chain.from_iterable(resource_demand)),
                    list(itertools.chain.from_iterable(self.resource_availability)))):
@@ -194,9 +130,9 @@ class Solver:
         forbidden_valid = self.is_forbidden_valid(solution)
 
         if verbose:
-            print "Preference valid: ", preference_valid
-            print "Mandatory valid: ", mandatory_valid
-            print "Forbidden valid: ", forbidden_valid
+            print ("Preference valid: ", preference_valid)
+            print ("Mandatory valid: ", mandatory_valid)
+            print ("Forbidden valid: ", forbidden_valid)
 
         return preference_valid and mandatory_valid and forbidden_valid
 
@@ -206,7 +142,7 @@ class Solver:
             preference_sum += self.preference_matrix[allocated_to][component]
 
         if verbose:
-            print "Preference sum: ", (preference_sum == 0)
+            print ("Preference sum: ", (preference_sum == 0))
 
         return preference_sum == 0
     # end is_preference_valid
@@ -222,7 +158,7 @@ class Solver:
                 mandatory_sum += 1
 
         if verbose:
-            print "Mandatory sum: ", (mandatory_sum == 0)
+            print ("Mandatory sum: ", (mandatory_sum == 0))
 
         return mandatory_sum == 0
     #end is_mandatory_valid
@@ -238,7 +174,7 @@ class Solver:
             forbidden_sum += (self.forbidden_matrix[combination[0]][combination[1]] and (solution[combination[0]] == solution[combination[1]]))
 
         if verbose:
-            print "Forbidden sum: ", (forbidden_sum == 0)
+            print ("Forbidden sum: ", (forbidden_sum == 0))
         return forbidden_sum == 0
 
     # check if mandatory_matrix and forbidden_matrix are consistent

@@ -1,42 +1,7 @@
-__author__ = 'Ivan'
+__author__ = 'ivan'
 
 
-class ComponentInitializer:
-
-    @property
-    def num_platforms(self): return self
-    @property
-    def num_platforms(self): return self
-
-    @property
-    def component_matrix(self): return self
-    @property
-    def platform_matrix(self): return self
-    @property
-    def resource_matrix(self): return self
-    @property
-    def resource_availabilty_matrix(self): return self
-    @property
-    def pairwise_matrix(self): return self
-    @property
-    def bandwith_matrix(self): return self
-    @property
-    def preference_matrix(self): return self
-    @property
-    def mandatory_matrix(self): return self
-    @property
-    def forbidden_matrix(self): return self
-    @property
-    def synergy_matrix(self): return self
-
-    @property
-    def trade_off_vector_f(self): return self
-
-    @property
-    def qu(self): return self
-
-    @property
-    def verbose(self): return self
+class PlatformInitializer:
 
     '''
         initialize - used to setup the input matrices, currently has mock data
@@ -45,7 +10,7 @@ class ComponentInitializer:
         self.verbose = verbose;
 
         if verbose:
-            print "Starting matrix initialization..."
+            print ("Starting matrix initialization...")
 
         self.num_components = num_components
         self.num_platforms = num_platforms
@@ -152,6 +117,6 @@ class ComponentInitializer:
                                   [1, 0.2, 0.3, 0.4, 0.5, 0.9, 1, 1.1, 1.2, 1.5, 2]]]
 
         if verbose:
-            print "Matrix initialization done!"
+            print("Matrix initialization done!")
     # end method initialize
 # end class ComponentInitializer
