@@ -33,6 +33,11 @@ if __name__ == '__main__':
     solver = slv.Solver(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
     solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
 
+    results = []
+    for i in range(0, 100):
+        result = solver.solve_by_genetic_algorithm()
+        results.append(result)
+        print("- % -", i)
     #result = solver.solve_by_genetic_algorithm(True, True)
 
     #solver.manual_fitness(result["result"])
@@ -43,15 +48,15 @@ if __name__ == '__main__':
     #solver.manual_fitness(result["result"])
 
     # print result
-    #print ("****************** R E S U L T ********************")
-    #print ("Method: ", result["method"])
-    #print ("Result: ", result["result"])
-    #print ("Score: ", result["score"][0], ", communication ", result["score"][1], ", res ", result["score"][2])
-    #print ("Skipping all on one: ", result["type"])
-    #print ("Runtime: ", result["time"])
-    #print ("Solution space: ", nUnits, "^", nComponents, " = ", pow(nUnits, nComponents))
-    #print ("----------- VALIDITY ----------")
-    #print ("Solution valid: ", solver.is_solution_valid(result["result"]))
-    #print ("Architectural validity\n", solver.is_architectural_valid(result["result"], True))
-    #print ("Mandatory - forbidden consistency: ", solver.mandatory_forbidden_consistency_check())
-    #print ("***************************************************")
+    print ("****************** R E S U L T ********************")
+    print ("Method: ", result["method"])
+    print ("Result: ", result["result"])
+    print ("Score: ", result["score"][0], ", communication ", result["score"][1], ", res ", result["score"][2])
+    print ("Skipping all on one: ", result["type"])
+    print ("Runtime: ", result["time"])
+    print ("Solution space: ", nUnits, "^", nComponents, " = ", pow(nUnits, nComponents))
+    print ("----------- VALIDITY ----------")
+    print ("Solution valid: ", solver.is_solution_valid(result["result"]))
+    print ("Architectural validity\n", solver.is_architectural_valid(result["result"], True))
+    print ("Mandatory - forbidden consistency: ", solver.mandatory_forbidden_consistency_check())
+    print ("***************************************************")

@@ -1,10 +1,16 @@
 __author__ = 'ivan'
 
+import array
+import random
 
-#from pyevolve import *
-#from pyevolve import G1DList
-#from pyevolve import GSimpleGA
+import numpy
+
+from deap import algorithms
+from deap import base
+from deap import creator
+from deap import tools
 from datetime import *
+
 import itertools
 from operator import le
 
@@ -28,14 +34,56 @@ class Solver:
         self.forbidden_matrix = forbidden_matrix
         self.synergy_matrix = synergy_matrix
 
-    def solve_by_simulated_annealing(self):
-        pass
-
-
     # discrete values
-    def solve_by_genetic_algorithm(self, skip_same_platform = True, verbose = False):
-       pass
+    def solve_by_genetic_algorithm(self):
+        creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
+        creator.create("Individual", array.array, typecode='b', fitness=creator.FitnessMin)
+
+        toolbox = base.Toolbox()
+
+        # Attribute generator
+        toolbox.register("attr_bool", random.randint, 0, 3)
+
+        # Structure initializers
+        toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_bool, 11)
+        toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
+        toolbox.register("evaluate", self.eval_one_min)
+        toolbox.register("mate", tools.cxTwoPoint)
+        toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
+        toolbox.register("select", tools.selTournament, tournsize=3)
+
+        ###########################
+
+        random.seed(64)
+
+        pop = toolbox.population(n=300)
+        hof = tools.HallOfFame(1)
+        stats = tools.Statistics(lambda ind: ind.fitness.values)
+        stats.register("avg", numpy.mean)
+        stats.register("std", numpy.std)
+        stats.register("min", numpy.min)
+        stats.register("max", numpy.max)
+
+        startTime = datetime.now()
+        pop, log = algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=40,stats=stats, halloffame=hof, verbose=False)
+        endTime = datetime.now()
+
+        best_ind = tools.selBest(pop, 1)[0]
+
+        res = {"result": best_ind,
+               "score": self.fitness_function(best_ind.fitness.values, False),
+               "method": "Genetic Algorithm", "pop" : pop, "log" : log, "hof" : hof,
+               "type": "-", "time":endTime - startTime}
+
+        #print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
+
+        return res
+
     # end method solve_by_genetic_algorithm
+
+    def eval_one_min(self, individual):
+        return self.fitness_function(individual)
 
     def fitness_function(self, result, shorter=True):
         g, resource_weight, communication_weight, weight = 0, 0, 0, 0
@@ -61,7 +109,7 @@ class Solver:
             weight = communication_weight + resource_weight
             if not self.is_solution_valid(result):
                 weight += 1000000
-            return weight
+            return [weight,] # must return a touple
         else:
             weight = communication_weight + resource_weight
             return [weight, communication_weight, resource_weight]
