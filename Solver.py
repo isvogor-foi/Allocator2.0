@@ -89,11 +89,15 @@ class Solver:
         g, resource_weight, communication_weight, weight = 0, 0, 0, 0
 
         #resources
-        for d in range(0, len(self.vec_trade_off_f) - 1):
-            for k in result:
-                resource_weight += (self.mat_norm_resources[d][int(k)][g] * self.vec_trade_off_f[d])
-                g += 1
-            g = 0
+        # for d in range(0, len(self.vec_trade_off_f) - 1):
+        #     for k in result:
+        #         resource_weight += (self.mat_norm_resources[d][int(k)][g] * self.vec_trade_off_f[d])
+        #         g += 1
+        #     g = 0
+        for component, allocated_to in enumerate(result):
+            for resource in range(len(self.vec_trade_off_f) - 1):
+                resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
+                #print("res:", resource, "allo: ", allocated_to, "comp: ", component)
 
         # communication
         for m in range(0, len(result)):
@@ -109,7 +113,7 @@ class Solver:
             weight = communication_weight + resource_weight
             if not self.is_solution_valid(result):
                 weight += 1000000
-            return [weight,] # must return a touple
+            return weight, # must return a touple
         else:
             weight = communication_weight + resource_weight
             return [weight, communication_weight, resource_weight]

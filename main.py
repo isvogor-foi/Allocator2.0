@@ -48,17 +48,15 @@ if __name__ == '__main__':
     #    f.write(string) # python will convert \n to os.linesep
     #f.close()
 
-    randoms = []
-    for i in range(0, 11):
-        randoms.append(random.randint(0,3))
-
-    print(randoms)
-
     initial_state = [0] * 11
     slver = saslv.SASolver(initial_state)
+    slver.setup_solver(solver)
+
     print(initial_state)
 
     something1, something2 = slver.anneal()
+
+    print(something1, ", ", something2)
 
 
     #solver.manual_fitness(result["result"])
