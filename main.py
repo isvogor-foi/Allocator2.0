@@ -66,3 +66,10 @@ if __name__ == '__main__':
     print ("Architectural validity\n", solver.is_architectural_valid(result["result"], True))
     print ("Mandatory - forbidden consistency: ", solver.mandatory_forbidden_consistency_check())
     print ("***************************************************")
+
+    #1.15539650222
+    #2.13983685843
+    #0.29119198373
+    #****************** R E S U L T ********************
+    #Method:  Genetic Algorithm
+    #Result:  array('b', [0, 1, 0, 0, 1, 0, 3, 1, 1, 2, 1])
