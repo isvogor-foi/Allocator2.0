@@ -1,7 +1,5 @@
 # Allocator2.0
-project depends on:
- - numpy
- - scipy
- - pyevolve 
-
-Built for Python 2.6 
+ - Updated to use DEAP
+ - Added simulated annealing
+ - Works with Python 3.X
+ - TODO: Some testing and code refactoring
