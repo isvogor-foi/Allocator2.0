@@ -58,6 +58,7 @@ if __name__ == '__main__':
 
     print(something1, ", ", something2)
 
+    #solver.manual_fitness(something1)
 
     #solver.manual_fitness(result["result"])
 

@@ -7,8 +7,8 @@ class SASolver(Annealer):
 
     Tmax = 1000000.0
     Tmin = 0.5
-    steps = 2000
-    updates = 10
+    steps = 15000
+    updates = 20
     copy_strategy = 'deepcopy'
     user_exit = False
     save_state_on_exit = True
