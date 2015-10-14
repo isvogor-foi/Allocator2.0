@@ -10,13 +10,13 @@ from deap import base
 from deap import creator
 from deap import tools
 from datetime import *
-import Solver
-
+from Solver import Solver
 
 class GASolver(Solver):
 
-        # discrete values
-    def solve(self):
+
+    # discrete values
+    def solve(self, initial_state="" ):
         creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
         creator.create("Individual", array.array, typecode='b', fitness=creator.FitnessMin)
 
@@ -53,7 +53,6 @@ class GASolver(Solver):
         best_ind = tools.selBest(pop, 1)[0]
 
         res = {"result": best_ind,
-               "score": self.fitness_function(best_ind.fitness.values, False),
                "method": "Genetic Algorithm", "pop" : pop, "log" : log, "hof" : hof,
                "type": "-", "time":endTime - startTime}
 
@@ -65,3 +64,4 @@ class GASolver(Solver):
 
     def evaluate(self, individual):
         return self.fitness_function(individual)
+        #return self.fitness_function(individual)

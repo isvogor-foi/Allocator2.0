@@ -2,13 +2,11 @@ __author__ = 'ivan'
 
 import PlatformInitializer as pinit
 import Calculator as calculator
-import Solver as so
-
+import SASolver as sa
+import GASolver as ga
+import Solver
 
 if __name__ == '__main__':
-
-    verbose = True
-
     #local vars
     nComponents = 11
     nUnits = 4
@@ -30,8 +28,19 @@ if __name__ == '__main__':
 
     #calculate the eignenvector
     vec_trade_off_f = calc.eigenvector(initializer.pairwise_matrix)
-    solver = so.Solver()
-    solver.solution_verifier.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
-    solver.solution_verifier.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
 
-    res = solver.solve("GASolver")
+    solver = ga.GASolver()
+
+    solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
+    solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
+    result = solver.solve()
+
+    print(result["result"])
+
+    solver = sa.SASolver([0]*11)
+
+    solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
+    solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
+
+    something1, something2 = solver.anneal()
+    print(something1,"", something2)
