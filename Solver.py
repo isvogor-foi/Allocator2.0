@@ -1,8 +1,7 @@
 __author__ = 'ivan'
 
-
-
 import itertools
+
 from operator import le
 from abc import ABCMeta, abstractmethod
 
@@ -71,9 +70,9 @@ class Solver:
                                      * self.vec_trade_off_f[resource] \
                                      * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
 
-                print (round(self.mat_norm_resources[resource][allocated_to][component], 4), " * ", \
-                    round(self.vec_trade_off_f[resource], 4), " * ", \
-                    self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to)
+                # print (round(self.mat_norm_resources[resource][allocated_to][component], 4), " * ", \
+                #     round(self.vec_trade_off_f[resource], 4), " * ", \
+                #     self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to)
 
         # communication
         for m in range(0, len(result)):
@@ -84,10 +83,8 @@ class Solver:
         # communication * trade off
         communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
 
-
-        print (resource_weight_2)
-        print (resource_weight)
-        print (communication_weight)
+        print("res: ", resource_weight, ", comm: ", communication_weight, " = ", resource_weight + communication_weight,
+            " -> res2: ", resource_weight_2)
     #end manual fitness
 
     def is_solution_valid(self, solution, verbose=False):
@@ -169,6 +166,14 @@ class Solver:
                 if self.mandatory_matrix[i][j] == 1 and self.forbidden_matrix[i][j] != 0:
                     invalid += 1
         return invalid == 0
+
+    def print_results(self, solution):
+        print("************************", solution["method"], "************************")
+        print(solution["result"])
+        print("Time: ", solution["time"])
+        print("Architectural validity: ", self.is_architectural_valid(solution["result"], False))
+        print("Fitness: ")
+        self.manual_fitness(solution["result"])
 
 #end class Solver
 

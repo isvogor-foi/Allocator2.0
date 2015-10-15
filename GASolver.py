@@ -2,7 +2,6 @@ __author__ = 'Ivan'
 
 import array
 import random
-
 import numpy
 
 from deap import algorithms
@@ -46,18 +45,19 @@ class GASolver(Solver):
         stats.register("min", numpy.min)
         stats.register("max", numpy.max)
 
-        startTime = datetime.now()
+        start_time = datetime.now()
         pop, log = algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=40,stats=stats, halloffame=hof, verbose=False)
-        endTime = datetime.now()
+        end_time = datetime.now()
 
         best_ind = tools.selBest(pop, 1)[0]
 
         res = {"result": best_ind,
-               "method": "Genetic Algorithm", "pop" : pop, "log" : log, "hof" : hof,
-               "type": "-", "time":endTime - startTime}
-
-        #print("Best individual is %s, %s" % (best_ind, best_ind.fitness.values))
-
+               "method": "Genetic Algorithm",
+               "pop" : pop,
+               "log" : log,
+               "hof" : hof,
+               "type": "-",
+               "time": end_time - start_time}
         return res
 
     # end method solve_by_genetic_algorithm
