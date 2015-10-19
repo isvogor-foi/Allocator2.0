@@ -1,6 +1,6 @@
 __author__ = 'ivan'
 
-import PlatformInitializer as pinit
+import PlatformInitializerTiwoS2  as pinit
 import Calculator as calculator
 import SASolver as sa
 import GASolver as ga
@@ -9,11 +9,11 @@ import FSSolver as fs
 if __name__ == '__main__':
     #local vars
     nComponents = 11
-    nUnits = 4
+    nUnits = 3
 
     #initialize input
     initializer = pinit.PlatformInitializer()
-    initializer.initialize(nUnits, nComponents, 1, 9)
+    initializer.initialize(nUnits, nComponents, 1, 9, True)
 
     #normalize input matrices
     calc = calculator.Calculator()
@@ -53,3 +53,12 @@ if __name__ == '__main__':
     result = solver.solve()
     solver.print_results(result)
 
+    print("****************************************************************")
+    manual_scenario_1 = [2, 0, 2, 2, 0, 0, 1, 0, 1, 1, 1]
+    manual_scenario_2 = [2, 1, 1, 0, 1, 2, 0, 1, 2, 1, 1]
+
+    print("Manual - Scenario 1")
+    solver.manual_fitness(manual_scenario_1)
+
+    print("Manual - Scenario 2")
+    solver.manual_fitness(manual_scenario_2)

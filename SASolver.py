@@ -19,8 +19,8 @@ class SASolver(Annealer, Solver):
 
     def move(self):
         self.state = []
-        for i in range(0, 11):
-            self.state.append(random.randint(0, 3))
+        for i in range(0, self.number_of_components):
+            self.state.append(random.randint(0, self.number_of_units - 1))
 
     def energy(self):
         evaluated = self.fitness_function(self.state)[0]

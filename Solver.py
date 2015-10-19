@@ -33,8 +33,8 @@ class Solver:
 
         for component, allocated_to in enumerate(result):
             for resource in range(len(self.vec_trade_off_f) - 1):
-                resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
                 #print("res:", resource, "allo: ", allocated_to, "comp: ", component)
+                resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
 
         # communication
         for m in range(0, len(result)):

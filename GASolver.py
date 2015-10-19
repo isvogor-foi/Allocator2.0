@@ -22,7 +22,7 @@ class GASolver(Solver):
         toolbox = base.Toolbox()
 
         # Attribute generator
-        toolbox.register("attr_bool", random.randint, 0, 3)
+        toolbox.register("attr_bool", random.randint, 0, self.number_of_units - 1)
 
         # Structure initializers
         toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_bool, 11)
