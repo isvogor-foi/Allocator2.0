@@ -7,48 +7,46 @@ class PlatformInitializer:
     '''
         initialize - used to setup the input matrices, currently has mock data
     '''
-    def initialize(self, num_components, num_platforms, min_weight, max_weight, verbose = False):
+    def initialize(self, num_platforms, num_components, min_weight, max_weight, verbose = False):
         self.verbose = verbose;
 
         if verbose:
             print ("Starting matrix initialization...")
 
-
         self.num_components = num_components
         self.num_platforms = num_platforms
+        self.num_of_resources = 3
 
+        print(self.num_platforms, self.num_components)
         self.component_matrix = self.generate_random_matrix_with_more_zeros(11, 0, 10)
         print("Component matrix:\n" + str(self.component_matrix))
 
         self.platform_matrix = self.generate_random_matrx(4, 0, 10, diagonal = 1)
         print("Component matrix:\n" + str(self.platform_matrix))
 
-        self.platform_matrix = [[1,5,5,4],
-                               [5,1,2,3],
-                               [5,2,1,3],
-                               [4,3,3,1]]
+        #maybe generate each depth level with different order of magnitude?
+        self.resource_matrix = np.random.random_integers(0, 100, size=(self.num_of_resources, self.num_platforms, self.num_components))
+        print(self.resource_matrix)
 
+        # generating with diferent orders of magnitude
+        #self.resource_matrix = []
+        #for i in range(0, self.num_of_resources):
+        #    self.resource_matrix.append(np.random.random_integers(0, 10 * (i + 1), size=(4, 11)))
+        #print(self.resource_matrix)
 
-        self.resource_matrix =  [[ #0 depth - execution time
-                                  [10,50,30,10,20,20,90,20,20,20,90],
-                                  [90,20,20,40,40,50,20,10,10,15,10],
-                                  [90,20,20,40,40,50,20,10,10,15,10],
-                                  [55,72,72,72,72,55,15,70,70,70,33]],
-                                [ #1 depth - memory
-                                  [48,128,64,48,64,64,168,148,48,48,168],
-                                  [256,256,256,168,168,168,128,96,32,32,64],
-                                  [256,256,256,168,168,168,128,96,32,32,64],
-                                  [128,148,148,148,148,64,64,148,148,148,96]],
-                                [ #2 depth - energy
-                                  [2,10,6,2,4,4,18,4,4,4,18],
-                                  [18,4,4,8,8,10,4,2,2,3,2],
-                                  [18,4,4,8,8,10,4,2,2,3,2],
-                                  [11,14,14,14,14,11,3,14,14,14,7]]]
+        # sum first row...
+        # print(sum(self.resource_matrix[0,0]))
 
-        self.resource_availabilty_matrix = [[100,150,150,100],
-                                    [256,640,640,256],
-                                    [50,25,25,15]]
+        self.resource_availabilty_matrix = np.empty([3, self.num_platforms], dtype=(int))
 
+        # make the size less than the sum of all resources!
+        # 70% of the sum, just so you cannot place all on one?
+        for i in range(0, self.num_of_resources):
+            for j in range (0, self.num_platforms):
+                self.resource_availabilty_matrix[i,j] = int(sum(self.resource_matrix[i, j] * 0.7))
+        print("Matrix \n", self.resource_availabilty_matrix)
+
+        # HERE!
         self.trade_off_vector_f =  [10,1] # append
 
         self.pairwise_matrix = [[1, 3, 0.1429, 3],

@@ -9,7 +9,7 @@ import FSSolver as fs
 if __name__ == '__main__':
     #local vars
     nComponents = 11
-    nUnits = 3
+    nUnits = 4
 
     #initialize input
     initializer = pinit.PlatformInitializer()
