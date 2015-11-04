@@ -1,5 +1,6 @@
 __author__ = 'ivan'
 
+import numpy as np
 
 class PlatformInitializer:
 
@@ -12,20 +13,15 @@ class PlatformInitializer:
         if verbose:
             print ("Starting matrix initialization...")
 
+
         self.num_components = num_components
         self.num_platforms = num_platforms
 
-        self.component_matrix = [[0,1,0,0,0,0,0,0,0,0,0],
-                                [1,0,5,0,3,0,0,0,0,0,0],
-                                [0,5,0,5,3,0,0,0,0,0,0],
-                                [0,0,5,0,0,1,3,7,0,0,0],
-                                [0,3,3,0,0,9,9,3,0,0,0],
-                                [0,0,0,1,9,0,0,0,7,7,0],
-                                [0,0,0,3,9,0,0,0,0,0,7],
-                                [0,0,0,7,3,0,0,0,0,0,0],
-                                [0,0,0,0,0,7,0,0,0,0,0],
-                                [0,0,0,0,0,7,0,0,0,0,0],
-                                [0,0,0,0,0,0,7,0,0,0,0]]
+        self.component_matrix = self.generate_random_matrix_with_more_zeros(11, 0, 10)
+        print("Component matrix:\n" + str(self.component_matrix))
+
+        self.platform_matrix = self.generate_random_matrx(4, 0, 10, diagonal = 1)
+        print("Component matrix:\n" + str(self.platform_matrix))
 
         self.platform_matrix = [[1,5,5,4],
                                [5,1,2,3],
@@ -119,4 +115,33 @@ class PlatformInitializer:
         if verbose:
             print("Matrix initialization done!")
     # end method initialize
+
+    def generate_random_matrx(self, size, min, max, diagonal = 0):
+        matrix = np.random.random_integers(min, max, size=(size, size))
+        # diagonalize...
+        np.fill_diagonal(matrix, diagonal)
+        result = ((matrix + matrix.T) / 2).astype(int)
+        np.fill_diagonal(matrix, diagonal)
+
+        return result
+
+    def generate_random_matrix_with_more_zeros(self, size, min, max, ratio = 0.5, diagonal = 0):
+        prob = [(1 - ratio)/(size - 1) for i in range(0, size)]
+        prob[0] = ratio
+        # we want nonlinear distribution
+        # with less connectivity between components which
+        matrix = np.random.choice(size, size=(size, size), p = prob)
+
+        # since size must be = to len(p) randomize from min to max
+        for x in np.nditer(matrix, op_flags=['readwrite']):
+            if x > 0:
+                x[...] = np.random.randint(min, max, 1)
+
+        # diagonalize...
+        np.fill_diagonal(matrix, diagonal)
+        result = ((matrix + matrix.T) / 2).astype(int)
+        np.fill_diagonal(matrix, diagonal)
+
+        return result
+
 # end class ComponentInitializer

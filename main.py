@@ -1,6 +1,6 @@
 __author__ = 'ivan'
 
-import PlatformInitializerTiwoS2  as pinit
+import PlatformInitializer  as pinit
 import Calculator as calculator
 import SASolver as sa
 import GASolver as ga
@@ -29,6 +29,7 @@ if __name__ == '__main__':
     #calculate the eignenvector
     vec_trade_off_f = calc.eigenvector(initializer.pairwise_matrix)
 
+
     solver = ga.GASolver()
 
     solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
@@ -37,28 +38,11 @@ if __name__ == '__main__':
     result = solver.solve()
     solver.print_results(result)
 
-    solver = sa.SASolver([0]*11)
+    #solver = sa.SASolver([0]*11)
 
-    solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
-    solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
+    #solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
+    #solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
 
-    result = solver.solve()
-    solver.print_results(result)
+    #result = solver.solve()
+    #solver.print_results(result)
 
-    solver = fs.FSSolver()
-
-    solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
-    solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
-
-    result = solver.solve()
-    solver.print_results(result)
-
-    print("****************************************************************")
-    manual_scenario_1 = [2, 0, 2, 2, 0, 0, 1, 0, 1, 1, 1]
-    manual_scenario_2 = [2, 1, 1, 0, 1, 2, 0, 1, 2, 1, 1]
-
-    print("Manual - Scenario 1")
-    solver.manual_fitness(manual_scenario_1)
-
-    print("Manual - Scenario 2")
-    solver.manual_fitness(manual_scenario_2)
