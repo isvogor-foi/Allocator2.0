@@ -1,6 +1,6 @@
 __author__ = 'ivan'
 
-import PlatformInitializerTiwoS1  as pinit
+import PlatformInitializer  as pinit
 import Calculator as calculator
 import SASolver as sa
 import GASolver as ga
