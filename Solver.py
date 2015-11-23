@@ -35,6 +35,9 @@ class Solver:
             for resource in range(len(self.vec_trade_off_f) - 1):
                 #print("res:", resource, "allo: ", allocated_to, "comp: ", component)
                 resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
+                # resource_weight += self.mat_norm_resources[resource][allocated_to][component] \
+                #                      * self.vec_trade_off_f[resource] \
+                #                      * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
 
         # communication
         for m in range(0, len(result)):
@@ -66,6 +69,7 @@ class Solver:
         for component, allocated_to in enumerate(result):
             for resource in range(len(self.vec_trade_off_f) - 1):
                 resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
+                #print(self.vec_trade_off_f[resource], "resource: ", resource)
                 resource_weight_2 += self.mat_norm_resources[resource][allocated_to][component] \
                                      * self.vec_trade_off_f[resource] \
                                      * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
@@ -172,6 +176,7 @@ class Solver:
         print(solution["result"])
         print("Time: ", solution["time"])
         print("Architectural validity: ", self.is_architectural_valid(solution["result"], False))
+        print("Vector: ", self.vec_trade_off_f)
         print("Fitness: ")
         self.manual_fitness(solution["result"])
 
