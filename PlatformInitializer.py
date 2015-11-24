@@ -7,7 +7,7 @@ class PlatformInitializer:
     '''
         initialize - used to setup the input matrices, currently has mock data
     '''
-    def initialize(self, num_platforms, num_components, min_weight, max_weight, verbose = False):
+    def initialize(self, num_platforms, num_components, num_resources, min_weight, max_weight, verbose = False):
         self.verbose = verbose;
 
         if verbose:
@@ -15,21 +15,23 @@ class PlatformInitializer:
 
         self.num_components = num_components
         self.num_platforms = num_platforms
-        self.num_of_resources = 3
+        self.num_of_resources = num_resources
 
     # Component matrix
-        print(self.num_platforms, self.num_components)
         self.component_matrix = self.generate_random_matrix_with_more_zeros(self.num_components, 0, 10)
-        print("Component matrix:\n" + str(self.component_matrix))
+        if verbose:
+            print("Component matrix:\n" + str(self.component_matrix))
 
     # Platform matrix
         self.platform_matrix = self.generate_random_matrx(self.num_platforms, 0, 10, diagonal = 1)
-        print("Platform matrix:\n" + str(self.platform_matrix))
+        if verbose:
+            print("Platform matrix:\n" + str(self.platform_matrix))
 
     #resource matrix
         #maybe generate each depth level with different order of magnitude?
         self.resource_matrix = np.random.random_integers(0, 100, size=(self.num_of_resources, self.num_platforms, self.num_components))
-        print("Resource matrix: \n", self.resource_matrix)
+        if verbose:
+            print("Resource matrix: \n", self.resource_matrix)
 
         # generating with diferent orders of magnitude
         #self.resource_matrix = []
@@ -48,7 +50,9 @@ class PlatformInitializer:
         for i in range(0, self.num_of_resources):
             for j in range (0, self.num_platforms):
                 self.resource_availabilty_matrix[i,j] = int(sum(self.resource_matrix[i, j] * 0.7))
-        print("Resource availability \n", self.resource_availabilty_matrix)
+
+        if verbose:
+            print("Resource availability \n", self.resource_availabilty_matrix)
 
     # vector
         self.trade_off_vector_f =  [10,1] # append
@@ -61,33 +65,37 @@ class PlatformInitializer:
         #                [2, 1, 9],
         #                [0.1111, 0.1111, 1]]
 
-        print("Pairwise matrix: \n", self.pairwise_matrix)
+        if verbose:
+            print("Pairwise matrix: \n", self.pairwise_matrix)
 
 
     # bandwith matrix
         self.bandwith_matrix = self.generate_random_matrx(self.num_platforms, 500, 500, 1)
-        print("Bandwith matrix: \n", self.bandwith_matrix)
+        if verbose:
+            print("Bandwith matrix: \n", self.bandwith_matrix)
 
     # preference matrix
         # 1 if must not be allocated to
         self.preference_matrix = self.generate_random_matrix_with_more_zeros(self.num_components, 0, 2, 0.2)[:num_platforms,:num_components]
-        print("Preference matrix: \n", self.preference_matrix)
+        if verbose:
+            print("Preference matrix: \n", self.preference_matrix)
 
     # mandatory matrix
         # 1 if must be together
         self.mandatory_matrix = self.generate_random_matrix_with_more_zeros(self.num_components,0,2)
-        print("Mandatory matrix: \n", self.mandatory_matrix)
+        if verbose:
+            print("Mandatory matrix: \n", self.mandatory_matrix)
 
     # forbidden matrix
         # fix mandatory & forbidden matrix so they don't contradict
         self.forbidden_matrix = self.check_logic_consistency(self.generate_random_matrix_with_more_zeros(self.num_components,0,2), self.mandatory_matrix)
-        print("Forbidden matrix: \n", self.forbidden_matrix)
+        if verbose:
+            print("Forbidden matrix: \n", self.forbidden_matrix)
 
     # synergy matrix
         self.synergy_matrix = self.generate_synergy_matrix()
-        print("Synergy matrix: \n", self.synergy_matrix)
-
         if verbose:
+            print("Synergy matrix: \n", self.synergy_matrix)
             print("Matrix initialization done!")
     # end method initialize
 
