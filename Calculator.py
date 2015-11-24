@@ -28,13 +28,17 @@ class Calculator:
     def eigenvector(self, matrix, verbose = False):
         # calculate eigenvector and eigenvalue
         eigenvalues, eigenvectors = la.eig(matrix)
+
         # principal eigenvalue is max eigenvalue
         principal_eigenvalue = max(eigenvalues)
+        principal_eigenvalue_index = np.where(eigenvalues == principal_eigenvalue)[0][0]
         self.eigenvalue_real_part = principal_eigenvalue.real
 
         trade_off_vector = []
-        for i in range(0, len(eigenvectors[0])):
-            trade_off_vector.append(eigenvectors[i][0].real)
+        # take the vector of the principal value position !!!
+        for i in range(0, len(eigenvectors[principal_eigenvalue_index])):
+            #print("Real: ", eigenvectors[i][principal_eigenvalue_index].real)
+            trade_off_vector.append(eigenvectors[i][principal_eigenvalue_index].real)
 
         sumVal = sum(trade_off_vector)
 
@@ -43,11 +47,10 @@ class Calculator:
 
         if verbose:
             print ("Eigenvalues: ", eigenvalues)
-            print ("Eigenvector: ", eigenvectors)
+            print ("Eigenvector: \n", eigenvectors)
             print ("final vector F: ", trade_off_vector)
-            print ("final eigenvalue: ", self.eigenvalue_real_part)
+            print ("Principal eigenvalue: ", self.eigenvalue_real_part)
 
-        print("Principal eigenvalue: ", self.eigenvalue_real_part)
         return trade_off_vector
     #end method eigenvector
 
