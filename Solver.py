@@ -29,13 +29,13 @@ class Solver:
         self.synergy_matrix = synergy_matrix
 
 
-    def fitness_function(self, result, shorter=True, use_synergy = True):
+    def fitness_function(self, result, shorter=True, use_synergy=False):
         resource_weight, communication_weight, weight = 0, 0, 0
 
         for component, allocated_to in enumerate(result):
             for resource in range(len(self.vec_trade_off_f) - 1):
                 #print("res:", resource, "allo: ", allocated_to, "comp: ", component)
-                if use_synergy:
+                if not use_synergy:
                     resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
                 else:
                     resource_weight += self.mat_norm_resources[resource][allocated_to][component] \
@@ -186,7 +186,7 @@ class Solver:
         print("Fitness: ")
         self.manual_fitness(solution["result"])
 
-    def print_results_for_file(self, solution):
+    def print_results_for_file(self, solution, filename, to_file = True):
         # output format:
         # method; nComponents ; nUnits ; nResources ; resPerformance ; commPerformance ; overall ; time ; solution
         #
@@ -196,8 +196,19 @@ class Solver:
         result += ";" + str(allocation_performance[2])+ ";" + str(allocation_performance[1])
         result += ";" + str(allocation_performance[0]) + ";" + str(allocation_performance[2] + allocation_performance[1])
         result += ";" + str(solution["time"])
-        result += ";" + str(solution["result"].tolist())
-        print(result)
+
+        if solution["method"] == "Genetic Algorithm":
+            result += ";" + str(solution["result"].tolist())
+        else:
+            result += ";" + str(solution["result"])
+
+        result += "\n"
+
+        if to_file:
+            with open("solutions/" + str(filename) + ".txt", "a") as file:
+                file.write(result)
+        else:
+            print(result)
 
 #end class Solver
 

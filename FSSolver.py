@@ -9,7 +9,9 @@ class FSSolver(Solver):
 
     def solve(self, skip_same_platform=True, verbose=False):
         # need to check if solution is valid!!!
-        print("Full space search started...")
+        if verbose:
+            print("Full space search started...")
+
         min_permutation = []
         min_weight = -1
 

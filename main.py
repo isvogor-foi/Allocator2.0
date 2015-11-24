@@ -2,18 +2,23 @@ __author__ = 'ivan'
 
 import PlatformInitializer as pinit
 import Calculator as calculator
-import SASolver as sa
-import GASolver as ga
-import FSSolver as fs
 import Allocator as alloc
+from random import randint
 
 if __name__ == '__main__':
     #local vars
 
 
     allocator = alloc.Allocator()
-    for i in range(5, 15):
-        allocator.solve_by_ga(pinit, calculator, i, 4, 3)
+    counter = 0
+    for nComponents in range(5, 15):
+        for nUnits in range(3, 6):
+            nResources = randint(3, 5)
+            counter += 1
+            allocator.solve_by_ga(pinit, calculator, nComponents, nUnits, nResources, counter)
+            allocator.solve_by_sa(pinit, calculator, nComponents, nUnits, nResources, counter)
+            allocator.solve_by_fss(pinit, calculator, nComponents, nUnits, nResources, counter)
+
 
     # nComponents = 11
     # nUnits = 3
