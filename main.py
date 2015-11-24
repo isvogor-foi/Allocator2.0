@@ -27,7 +27,9 @@ if __name__ == '__main__':
     mat_bandwidth = initializer.bandwith_matrix
 
     #calculate the eignenvector
-    vec_trade_off_f = calc.eigenvector(initializer.pairwise_matrix)
+    vec_trade_off_f = calc.eigenvector(initializer.pairwise_matrix, True)
+    print("Consistency ratio:", calc.calculateConsistency(initializer.pairwise_matrix))
+
 
     solver = ga.GASolver()
 

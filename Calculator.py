@@ -30,7 +30,7 @@ class Calculator:
         eigenvalues, eigenvectors = la.eig(matrix)
         # principal eigenvalue is max eigenvalue
         principal_eigenvalue = max(eigenvalues)
-        eigenvalue_real_part = principal_eigenvalue.real
+        self.eigenvalue_real_part = principal_eigenvalue.real
 
         trade_off_vector = []
         for i in range(0, len(eigenvectors[0])):
@@ -42,8 +42,18 @@ class Calculator:
         trade_off_vector = [trade_off_vector[i] / float(sumVal) for i in range(0, len(trade_off_vector))]
 
         if verbose:
+            print ("Eigenvalues: ", eigenvalues)
+            print ("Eigenvector: ", eigenvectors)
             print ("final vector F: ", trade_off_vector)
-            print ("final eigenvalue: ", eigenvalue_real_part)
+            print ("final eigenvalue: ", self.eigenvalue_real_part)
 
+        print("Principal eigenvalue: ", self.eigenvalue_real_part)
         return trade_off_vector
     #end method eigenvector
+
+    def calculateConsistency(self, pairwiseMatrix):
+        # hardcoded AHP table... yes... :)
+        RI = [0, 0, 0.58, 0.9, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49]
+        CI = (self.eigenvalue_real_part - len(pairwiseMatrix)) / (len(pairwiseMatrix) - 1)
+        self.consistencyRatio = CI / RI[len(pairwiseMatrix) - 1]
+        return self.consistencyRatio

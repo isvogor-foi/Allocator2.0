@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="88eba9e0-4d1b-49f2-b86d-13ba4a470fc9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Allocator2.0.iml" afterPath="$PROJECT_DIR$/.idea/Allocator2.0.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Calculator.py" afterPath="$PROJECT_DIR$/Calculator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlatformInitializer.py" afterPath="$PROJECT_DIR$/PlatformInitializer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Allocator2.0.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,19 +22,17 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Allocator2.0" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="27" selection-start="747" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="307" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
               <folding>
                 <element signature="e#21#57#0" expanded="true" />
               </folding>
@@ -39,82 +40,85 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformInitializer.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PlatformInitializer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="66" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.6768061" vertical-offset="579" max-vertical-offset="2873">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="79" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformInitializerTiwoS1.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlatformInitializerTiwoS1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlatformInitializerTiwoS1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="28" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2057">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformInitializerTiwoS2.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlatformInitializerTiwoS2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlatformInitializerTiwoS2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="2267" selection-end="2405" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1938">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GASolver.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GASolver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GASolver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="2011" selection-end="2011" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1071">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solver.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Solver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="58" selection-start="1342" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3179">
-              <folding />
+            <state vertical-scroll-proportion="-33.076923">
+              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+              <folding>
+                <element signature="e#21#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FSSolver.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FSSolver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FSSolver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="26" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="714">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculator.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Calculator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Calculator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="918">
-              <folding />
+            <state vertical-scroll-proportion="0.68218297">
+              <caret line="46" column="55" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="55" />
+              <folding>
+                <element signature="e#21#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decomp.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Anaconda3/Lib/site-packages/scipy/linalg/decomp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="0" selection-start="5338" selection-end="5338" vertical-scroll-proportion="0.0" vertical-offset="2325" max-vertical-offset="14841">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SASolver.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SASolver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SASolver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="51" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="765">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -145,32 +149,21 @@
     <setting file="file://$PROJECT_DIR$/PlatformInitializer.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/init.py" />
-        <option value="$PROJECT_DIR$/ComponentInitializer.py" />
-        <option value="$PROJECT_DIR$/Normalizer.py" />
-        <option value="$PROJECT_DIR$/Calculator.py" />
-        <option value="$PROJECT_DIR$/SolutionVerifier.py" />
-        <option value="$PROJECT_DIR$/BFSolver.py" />
-        <option value="$PROJECT_DIR$/FSSolver.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/GASolver.py" />
-        <option value="$PROJECT_DIR$/PlatformInitializerTiwo.py" />
-        <option value="$PROJECT_DIR$/SASolver.py" />
-        <option value="$PROJECT_DIR$/PlatformInitializerTiwoS2.py" />
-        <option value="$PROJECT_DIR$/PlatformInitializerTiwoS1.py" />
         <option value="$PROJECT_DIR$/Solver.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Calculator.py" />
         <option value="$PROJECT_DIR$/PlatformInitializer.py" />
       </list>
     </option>
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -186,7 +179,7 @@
     <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -198,7 +191,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,6 +211,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,11 +240,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="last_opened_file_path" value="C:/Anaconda3/python.exe" />
     <property name="SearchEverywhereHistory" value="pri" />
-  </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings />
-    </option>
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -272,10 +263,109 @@
       <module name="Allocator2.0" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Allocator2.0" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Allocator2.0" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Allocator2.0" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Allocator2.0" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Allocator2.0" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -302,103 +392,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Allocator2.0" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Allocator2.0" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Allocator2.0" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Allocator2.0" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Allocator2.0" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
     </list>
@@ -409,102 +402,115 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="88eba9e0-4d1b-49f2-b86d-13ba4a470fc9" name="Default" comment="" />
       <created>1444481351598</created>
+      <option name="number" value="Default" />
       <updated>1444481351598</updated>
     </task>
     <task id="LOCAL-00001" summary="Minor changes and additions (work in progress)&#10; - Eigenvalue calculation added &#10; - Normalizer renamed to Calculator">
       <created>1444512499645</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1444512499645</updated>
     </task>
     <task id="LOCAL-00002" summary="Minor changes and additions (work in progress)&#10; - all code is refactored, a bit more code optimizing is necessary">
       <created>1444561722985</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1444561722985</updated>
     </task>
     <task id="LOCAL-00003" summary="Genetic Algorithm solution added, few functions recoded&#10;  - ready for adding new matrices and architectural constraints">
       <created>1444587424040</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1444587424040</updated>
     </task>
     <task id="LOCAL-00004" summary="Synergy added for testing">
       <created>1444681359740</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1444681359740</updated>
     </task>
     <task id="LOCAL-00005" summary="Simulated Annealing works -- some improvements to come">
       <created>1444764205657</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1444764205657</updated>
     </task>
     <task id="LOCAL-00006" summary="SA parameters">
       <created>1444765335953</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1444765335953</updated>
     </task>
     <task id="LOCAL-00007" summary="Refactoring in progress...">
       <created>1444845759764</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1444845759764</updated>
     </task>
     <task id="LOCAL-00008" summary="Refactoring in progress...">
       <created>1444858686876</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1444858686876</updated>
     </task>
     <task id="LOCAL-00009" summary="Refactoring &#10; - added printing results&#10; - added full space search (exact solution)">
       <created>1444938755506</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1444938755506</updated>
     </task>
     <task id="LOCAL-00010" summary="Real numbers &#10; - added real TiWo numbers, first iteration for testing purposes">
       <created>1445274220744</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1445274220744</updated>
     </task>
     <task id="LOCAL-00011" summary="First validation cycle changes&#10; - verified synergy effect (changed values)&#10; - preference vector edited (36% time, 58% power, 0.05% communication)">
       <created>1447969207845</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1447969207845</updated>
     </task>
     <task id="LOCAL-00012" summary="First validation cycle changes&#10; - verified synergy effect (changed values)&#10; - preference vector edited (36% time, 58% power, 0.05% communication)">
       <created>1448300628474</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1448300628474</updated>
     </task>
     <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2065678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40195015" sideWeight="0.18541667" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40195015" sideWeight="0.81458336" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25660792" sideWeight="0.19809322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25660792" sideWeight="0.80190676" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -516,9 +522,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
     <MESSAGE value="Minor changes and additions (work in progress)&#10; - Eigenvalue calculation added &#10; - Normalizer renamed to Calculator" />
     <MESSAGE value="Minor changes and additions (work in progress)&#10; - all code is refactored, a bit more code optimizing is necessary" />
     <MESSAGE value="Genetic Algorithm solution added, few functions recoded&#10;  - ready for adding new matrices and architectural constraints" />
@@ -535,18 +538,39 @@
     <breakpoint-manager>
       <option name="time" value="9" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FSSolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="765">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="4" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -555,59 +579,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="13" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2159">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="160" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1224">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="2549" max-vertical-offset="3145">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FSSolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="26" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="935">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="561">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="36" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="765">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="50" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="867">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -616,52 +648,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="13" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="2159">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="33" selection-start="1672" selection-end="1680" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1224">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="0" selection-start="7425" selection-end="7425" vertical-scroll-proportion="0.0" vertical-offset="2319" max-vertical-offset="3060">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="171" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="527">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="50" selection-start="2099" selection-end="2103" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1598">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -670,28 +709,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="13" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="2159">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="22" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -700,28 +742,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="13" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2159">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SASolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="14" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -730,27 +775,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="52" selection-start="4866" selection-end="4866" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2159" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="52" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="935" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="52" selection-start="5719" selection-end="5719" vertical-scroll-proportion="0.0" vertical-offset="2119" max-vertical-offset="2754" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="138" column="52" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="986" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="4" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -759,17 +813,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="40" selection-start="5648" selection-end="5648" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="986" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="259" max-vertical-offset="1173">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -778,17 +837,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="40" selection-start="5648" selection-end="5648" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="986" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -797,97 +861,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="40" selection-start="2882" selection-end="2882" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="986" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/simanneal/anneal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="2" selection-start="381" selection-end="381" vertical-scroll-proportion="-1.9037328" vertical-offset="1122" max-vertical-offset="3893" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="29" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SASolver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="51" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/scipy/linalg/decomp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="5338" selection-end="5338" vertical-scroll-proportion="0.0" vertical-offset="2325" max-vertical-offset="14841">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GASolver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2011" selection-end="2011" vertical-scroll-proportion="0.0" vertical-offset="535" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="58" selection-start="1342" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="3179">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FSSolver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="26" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializerTiwoS1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="28" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2057">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializerTiwoS2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="2267" selection-end="2405" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1938">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SASolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FSSolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GASolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-33.076923">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding>
+            <element signature="e#21#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="27" selection-start="747" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
           <folding>
             <element signature="e#21#57#0" expanded="true" />
           </folding>
@@ -896,11 +952,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="66" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.6768061" vertical-offset="579" max-vertical-offset="2873">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="79" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68218297">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="55" />
+          <folding>
+            <element signature="e#21#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
-

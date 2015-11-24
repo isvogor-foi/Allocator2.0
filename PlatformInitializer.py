@@ -56,16 +56,17 @@ class PlatformInitializer:
     # TODO: Something is wrong with this matrix (negative results)
     # pairwise matrix (+1 for communication)
         self.pairwise_matrix = self.get_pairwise_submatix(self.num_of_resources + 1)
-        self.pairwise_matrix = [[1, 0.5, 9],
-                       [2, 1, 9],
-                       [0.1111, 0.1111, 1]]
 
-        print("Pairwise matrix", self.pairwise_matrix)
+        # self.pairwise_matrix = [[1, 0.5, 9],
+        #                [2, 1, 9],
+        #                [0.1111, 0.1111, 1]]
+
+        print("Pairwise matrix: \n", self.pairwise_matrix)
 
 
     # bandwith matrix
         self.bandwith_matrix = self.generate_random_matrx(self.num_platforms, 500, 500, 1)
-        print("Bandwith matrix: ", self.bandwith_matrix)
+        print("Bandwith matrix: \n", self.bandwith_matrix)
 
     # preference matrix
         # 1 if must not be allocated to
@@ -84,7 +85,7 @@ class PlatformInitializer:
 
     # synergy matrix
         self.synergy_matrix = self.generate_synergy_matrix()
-        print("Synergy matrix: ", self.synergy_matrix)
+        print("Synergy matrix: \n", self.synergy_matrix)
 
         if verbose:
             print("Matrix initialization done!")
