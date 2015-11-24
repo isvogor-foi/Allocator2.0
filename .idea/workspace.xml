@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15ab443d-4902-4515-b66b-b08cc4bf1241" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/1.txt" afterPath="$PROJECT_DIR$/solutions/1.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Allocator2.0.iws" />
@@ -58,15 +57,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformInitializerTiwoS1.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlatformInitializerTiwoS1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="49" selection-start="2224" selection-end="2224" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2057">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GASolver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GASolver.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,10 +75,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.032015067" vertical-offset="0" max-vertical-offset="531">
+            <state line="1" column="5" selection-start="17" selection-end="17" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="1139">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/solutions/1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.1878453" vertical-offset="0" max-vertical-offset="543">
               <folding />
             </state>
           </provider>
@@ -408,14 +407,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1040" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22457626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22457626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32286024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3351709" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -555,7 +554,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.032015067" vertical-offset="0" max-vertical-offset="531">
+        <state line="1" column="5" selection-start="17" selection-end="17" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solutions/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.1878453" vertical-offset="0" max-vertical-offset="543">
           <folding />
         </state>
       </provider>
