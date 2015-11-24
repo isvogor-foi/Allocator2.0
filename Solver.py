@@ -142,6 +142,7 @@ class Solver:
         components = range(0, self.number_of_components, 1)
 
         for combination in itertools.combinations(components, 2):
+            #print("Mandatory: ", self.mandatory_matrix[combination[0]][combination[1]])
             if not(not(self.mandatory_matrix[combination[0]][combination[1]]) or solution[combination[0]] == solution[combination[1]]):
                 mandatory_sum += 1
 

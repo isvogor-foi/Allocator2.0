@@ -43,7 +43,7 @@ class PlatformInitializer:
         # print(sum(self.resource_matrix[0,0]))
 
     # resource availability matrix
-        self.resource_availabilty_matrix = np.empty([3, self.num_platforms], dtype=(int))
+        self.resource_availabilty_matrix = np.empty([self.num_of_resources, self.num_platforms], dtype=(int))
 
         # make the size less than the sum of all resources!
         # 70% of the sum, just so you cannot place all on one?

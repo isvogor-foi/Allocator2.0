@@ -3,12 +3,8 @@ __author__ = 'Ivan'
 import GASolver as ga
 
 class Allocator:
-    def solve_by_ga(self, pinit, calculator):
-        nComponents = 11
-        nUnits = 3
-        nResources = 3
+    def solve_by_ga(self, pinit, calculator, nComponents, nUnits, nResources):
 
-        #initialize input
         initializer = pinit.PlatformInitializer()
         initializer.initialize(nUnits, nComponents, nResources, 1, 9, False)
 

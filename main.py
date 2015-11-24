@@ -10,8 +10,9 @@ import Allocator as alloc
 if __name__ == '__main__':
     #local vars
 
+
     allocator = alloc.Allocator()
-    allocator.solve_by_ga(pinit, calculator)
+    allocator.solve_by_ga(pinit, calculator, 50, 15, 7)
 
     # nComponents = 11
     # nUnits = 3

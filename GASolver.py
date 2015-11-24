@@ -25,7 +25,7 @@ class GASolver(Solver):
         toolbox.register("attr_bool", random.randint, 0, self.number_of_units - 1)
 
         # Structure initializers
-        toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_bool, 11)
+        toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_bool, self.number_of_components)
         toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
         toolbox.register("evaluate", self.evaluate)
