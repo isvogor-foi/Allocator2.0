@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15ab443d-4902-4515-b66b-b08cc4bf1241" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Allocator.py" afterPath="$PROJECT_DIR$/Allocator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Allocator2.0.iml" afterPath="$PROJECT_DIR$/.idea/Allocator2.0.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GASolver.py" afterPath="$PROJECT_DIR$/GASolver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlatformInitializer.py" afterPath="$PROJECT_DIR$/PlatformInitializer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Solver.py" afterPath="$PROJECT_DIR$/Solver.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
@@ -33,7 +30,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="54" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="1173">
+            <state line="15" column="56" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="1190">
               <folding>
                 <element signature="e#21#56#0" expanded="true" />
               </folding>
@@ -44,16 +41,16 @@
       <file leaf-file-name="Allocator.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Allocator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+            <state line="23" column="0" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlatformInitializer.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PlatformInitializer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1620" selection-end="1620" vertical-scroll-proportion="1.3462247" vertical-offset="0" max-vertical-offset="3026">
+            <state line="43" column="0" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0" vertical-offset="2449" max-vertical-offset="3026">
               <folding />
             </state>
           </provider>
@@ -71,7 +68,7 @@
       <file leaf-file-name="GASolver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GASolver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="121" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+            <state line="27" column="121" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -97,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solver.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Solver.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="0" selection-start="7067" selection-end="7067" vertical-scroll-proportion="-13.153846" vertical-offset="2208" max-vertical-offset="3196">
+            <state line="180" column="2" selection-start="8651" selection-end="8673" vertical-scroll-proportion="0.27659574" vertical-offset="2866" max-vertical-offset="3502">
               <folding />
             </state>
           </provider>
@@ -130,11 +127,11 @@
       <list>
         <option value="$PROJECT_DIR$/PlatformInitializerTiwoS1.py" />
         <option value="$PROJECT_DIR$/Calculator.py" />
-        <option value="$PROJECT_DIR$/Allocator.py" />
         <option value="$PROJECT_DIR$/GASolver.py" />
-        <option value="$PROJECT_DIR$/Solver.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/PlatformInitializer.py" />
+        <option value="$PROJECT_DIR$/Allocator.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Solver.py" />
       </list>
     </option>
   </component>
@@ -392,7 +389,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32286024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3351709" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3351709" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -437,13 +434,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/Solver.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
   </component>
@@ -471,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="0" selection-start="7067" selection-end="7067" vertical-scroll-proportion="-13.153846" vertical-offset="2208" max-vertical-offset="3196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PlatformInitializerTiwoS1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="49" selection-start="2224" selection-end="2224" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2057">
@@ -485,19 +468,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Allocator.py">
+    <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+        <state line="43" column="0" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0" vertical-offset="2449" max-vertical-offset="3026">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="54" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="1173">
-          <folding>
-            <element signature="e#21#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -508,9 +482,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlatformInitializer.py">
+    <entry file="file://$PROJECT_DIR$/Allocator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1620" selection-end="1620" vertical-scroll-proportion="1.3462247" vertical-offset="0" max-vertical-offset="3026">
+        <state line="23" column="0" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="56" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="1190">
+          <folding>
+            <element signature="e#21#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="2" selection-start="8651" selection-end="8673" vertical-scroll-proportion="0.27659574" vertical-offset="2866" max-vertical-offset="3502">
           <folding />
         </state>
       </provider>

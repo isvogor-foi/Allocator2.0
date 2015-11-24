@@ -24,9 +24,10 @@ class Allocator:
 
         solver = ga.GASolver()
 
-        solver.set_matrices(nComponents, nUnits, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
+        solver.set_matrices(nComponents, nUnits, nResources, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, initializer.resource_matrix, mat_resource_availability, initializer.platform_matrix)
         solver.set_architectural_constraints(initializer.preference_matrix, initializer.mandatory_matrix, initializer.forbidden_matrix, initializer.synergy_matrix)
 
         result = solver.solve()
-        print("Consistency ratio:", calc.calculateConsistency(initializer.pairwise_matrix))
-        solver.print_results(result)
+        #print("Consistency ratio:", calc.calculateConsistency(initializer.pairwise_matrix))
+        #solver.print_results(result)
+        solver.print_results_for_file(result)

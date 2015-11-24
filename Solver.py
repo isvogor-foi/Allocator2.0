@@ -10,7 +10,7 @@ class Solver:
     @abstractmethod
     def solve(self): pass
 
-    def set_matrices(self, number_of_components, number_of_units, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, resource_matrix, resource_availability, unit_matrix):
+    def set_matrices(self, number_of_components, number_of_units, number_of_resources, vec_trade_off_f, mat_norm_components, mat_norm_resources, mat_norm_units, resource_matrix, resource_availability, unit_matrix):
         self.number_of_components = number_of_components
         self.number_of_units = number_of_units
         self.vec_trade_off_f = vec_trade_off_f
@@ -20,6 +20,7 @@ class Solver:
         self.resource_matrix = resource_matrix
         self.resource_availability = resource_availability
         self.unit_matrix = unit_matrix
+        self.number_of_resources = number_of_resources
 
     def set_architectural_constraints(self, preference_matrix, mandatory_matrix, forbidden_matrix, synergy_matrix):
         self.preference_matrix = preference_matrix
@@ -28,16 +29,18 @@ class Solver:
         self.synergy_matrix = synergy_matrix
 
 
-    def fitness_function(self, result, shorter=True):
+    def fitness_function(self, result, shorter=True, use_synergy = True):
         resource_weight, communication_weight, weight = 0, 0, 0
 
         for component, allocated_to in enumerate(result):
             for resource in range(len(self.vec_trade_off_f) - 1):
                 #print("res:", resource, "allo: ", allocated_to, "comp: ", component)
-                resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
-                # resource_weight += self.mat_norm_resources[resource][allocated_to][component] \
-                #                      * self.vec_trade_off_f[resource] \
-                #                      * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
+                if use_synergy:
+                    resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
+                else:
+                    resource_weight += self.mat_norm_resources[resource][allocated_to][component] \
+                                         * self.vec_trade_off_f[resource] \
+                                         * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
 
         # communication
         for m in range(0, len(result)):
@@ -61,7 +64,7 @@ class Solver:
 
     #TODO: update fitness_function when this is done
     #TODO: try simulated annealing scipy.optimize
-    def manual_fitness(self, result):
+    def manual_fitness(self, result, verbose = False):
         resource_weight, communication_weight = 0, 0
         resource_weight_2 = 0
 
@@ -86,9 +89,11 @@ class Solver:
 
         # communication * trade off
         communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
+        if verbose:
+            print("res: ", resource_weight, ", comm: ", communication_weight, " = ", resource_weight + communication_weight, " -> res2: ", resource_weight_2)
 
-        print("res: ", resource_weight, ", comm: ", communication_weight, " = ", resource_weight + communication_weight,
-            " -> res2: ", resource_weight_2)
+        return [resource_weight, communication_weight, resource_weight_2]
+
     #end manual fitness
 
     def is_solution_valid(self, solution, verbose=False):
@@ -180,6 +185,19 @@ class Solver:
         print("Vector: ", self.vec_trade_off_f)
         print("Fitness: ")
         self.manual_fitness(solution["result"])
+
+    def print_results_for_file(self, solution):
+        # output format:
+        # method; nComponents ; nUnits ; nResources ; resPerformance ; commPerformance ; overall ; time ; solution
+        #
+        result = solution["method"] + ";"
+        result += str(self.number_of_components) + ";" + str(self.number_of_units) + ";" + str(self.number_of_resources)
+        allocation_performance = self.manual_fitness(solution["result"])
+        result += ";" + str(allocation_performance[2])+ ";" + str(allocation_performance[1])
+        result += ";" + str(allocation_performance[0]) + ";" + str(allocation_performance[2] + allocation_performance[1])
+        result += ";" + str(solution["time"])
+        result += ";" + str(solution["result"].tolist())
+        print(result)
 
 #end class Solver
 

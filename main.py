@@ -12,7 +12,8 @@ if __name__ == '__main__':
 
 
     allocator = alloc.Allocator()
-    allocator.solve_by_ga(pinit, calculator, 50, 15, 7)
+    for i in range(5, 15):
+        allocator.solve_by_ga(pinit, calculator, i, 4, 3)
 
     # nComponents = 11
     # nUnits = 3
