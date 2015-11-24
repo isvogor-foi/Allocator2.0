@@ -58,5 +58,7 @@ class Calculator:
         # hardcoded AHP table... yes... :)
         RI = [0, 0, 0.58, 0.9, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49]
         CI = (self.eigenvalue_real_part - len(pairwiseMatrix)) / (len(pairwiseMatrix) - 1)
+        if CI < 0:
+            CI = 0
         self.consistencyRatio = CI / RI[len(pairwiseMatrix) - 1]
         return self.consistencyRatio
