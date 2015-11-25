@@ -54,7 +54,8 @@ class Solver:
         if shorter:
             weight = communication_weight + resource_weight
             if not self.is_solution_valid(result):
-                weight += 1000000
+                #weight = float('inf')
+                weight += 100000000
             return weight, # must return a touple
         else:
             weight = communication_weight + resource_weight
@@ -63,8 +64,7 @@ class Solver:
 
 
     #TODO: update fitness_function when this is done
-    #TODO: try simulated annealing scipy.optimize
-    def manual_fitness(self, result, verbose = False):
+    def manual_fitness(self, result, verbose = True):
         resource_weight, communication_weight = 0, 0
         resource_weight_2 = 0
 
@@ -91,6 +91,8 @@ class Solver:
         communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
         if verbose:
             print("res: ", resource_weight, ", comm: ", communication_weight, " = ", resource_weight + communication_weight, " -> res2: ", resource_weight_2)
+            self.is_architectural_valid(result, True)
+            self.is_solution_valid(result, True)
 
         return [resource_weight, communication_weight, resource_weight_2]
 
