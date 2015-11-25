@@ -29,7 +29,7 @@ class Solver:
         self.synergy_matrix = synergy_matrix
 
 
-    def fitness_function(self, result, shorter=True, use_synergy=False):
+    def fitness_function(self, result, shorter=True, use_synergy=True):
         resource_weight, communication_weight, weight = 0, 0, 0
 
         for component, allocated_to in enumerate(result):
@@ -186,15 +186,17 @@ class Solver:
         print("Fitness: ")
         self.manual_fitness(solution["result"])
 
-    def print_results_for_file(self, solution, filename, to_file = True):
+    def print_results_for_file(self, solution, filename, to_file = False):
         # output format:
-        # method; nComponents ; nUnits ; nResources ; resPerformance ; commPerformance ; overall ; time ; solution
+        # method; nComponents ; nUnits ; nResources ; resPerformance ; commPerformance ; overall ; res1 ; time ; solution
         #
         result = solution["method"] + ";"
         result += str(self.number_of_components) + ";" + str(self.number_of_units) + ";" + str(self.number_of_resources)
         allocation_performance = self.manual_fitness(solution["result"])
-        result += ";" + str(allocation_performance[2])+ ";" + str(allocation_performance[1])
-        result += ";" + str(allocation_performance[0]) + ";" + str(allocation_performance[2] + allocation_performance[1])
+        result += ";" + str(allocation_performance[2]) + ";" + str(allocation_performance[1])
+        result += ";" + str(allocation_performance[2] + allocation_performance[1])
+        result += ";" + str(allocation_performance[0])
+        result += ";" + str(self.is_solution_valid(solution["result"], False))
         result += ";" + str(solution["time"])
 
         if solution["method"] == "Genetic Algorithm":
