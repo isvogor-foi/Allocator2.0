@@ -212,7 +212,7 @@ class Solver:
         print("Fitness: ")
         self.manual_fitness(solution["result"])
 
-    def print_results_for_file(self, solution, filename, to_file = False):
+    def print_results_for_file(self, solution, filename, to_file = True):
         # output format:
         # method; nComponents ; nUnits ; nResources ; resPerformance ; commPerformance ; overall ; res1 ; time ; solution
         #
@@ -233,7 +233,7 @@ class Solver:
         result += "\n"
 
         if to_file:
-            with open("solutions/" + str(filename) + ".txt", "a") as file:
+            with open("solutions/" + str(filename) + ".txt", "a+") as file:
                 file.write(result)
         else:
             print(result)
