@@ -10,6 +10,7 @@ from deap import creator
 from deap import tools
 from datetime import *
 from Solver import Solver
+#from scoop import futures
 
 class GASolver(Solver):
 
@@ -32,6 +33,7 @@ class GASolver(Solver):
         toolbox.register("mate", tools.cxTwoPoint)
         toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
         toolbox.register("select", tools.selTournament, tournsize=3)
+        #toolbox.register("map", futures.map) # multiprocessing speedup
 
         ###########################
 

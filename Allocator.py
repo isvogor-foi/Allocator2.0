@@ -24,7 +24,7 @@ class Allocator:
         #calculate the eignenvector
         self.vec_trade_off_f = calc.eigenvector(self.initializer.pairwise_matrix, False)
 
-    def solve_by_ga(self, nComponents, nUnits, nResources, filename):
+    def solve_by_ga(self, nComponents, nUnits, nResources, filename, i):
         #normalize input matrices
         solver = ga.GASolver()
         solver.set_matrices(nComponents, nUnits, nResources, self.vec_trade_off_f, self.mat_norm_components, self.mat_norm_resources,
@@ -38,10 +38,10 @@ class Allocator:
         #print("Consistency ratio:", calc.calculateConsistency(initializer.pairwise_matrix))
         #solver.print_results(result)
 
-        solver.print_results_for_file(result, filename)
+        solver.print_results_for_file(result, filename, i)
         return solver.is_solution_valid(result["result"], False)
 
-    def solve_by_sa(self, nComponents, nUnits, nResources, filename):
+    def solve_by_sa(self, nComponents, nUnits, nResources, filename, i):
         solver = sa.SASolver([0] * nComponents)
 
         solver.set_matrices(nComponents, nUnits, nResources, self.vec_trade_off_f, self.mat_norm_components, self.mat_norm_resources,
@@ -52,11 +52,11 @@ class Allocator:
 
         result = solver.solve()
 
-        solver.print_results_for_file(result, filename)
+        solver.print_results_for_file(result, filename, i)
         return solver.is_solution_valid(result["result"], False)
 
 
-    def solve_by_fss(self, nComponents, nUnits, nResources, filename):
+    def solve_by_fss(self, nComponents, nUnits, nResources, filename, i):
         solver = fs.FSSolver()
 
         solver.set_matrices(nComponents, nUnits, nResources, self.vec_trade_off_f, self.mat_norm_components, self.mat_norm_resources,
@@ -67,5 +67,5 @@ class Allocator:
 
         result = solver.solve()
 
-        solver.print_results_for_file(result, filename)
+        solver.print_results_for_file(result, filename, i)
         return solver.is_solution_valid(result["result"], False)

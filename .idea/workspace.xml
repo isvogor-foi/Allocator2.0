@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ab443d-4902-4515-b66b-b08cc4bf1241" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Allocator.py" afterPath="$PROJECT_DIR$/Allocator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GASolver.py" afterPath="$PROJECT_DIR$/GASolver.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Solver.py" afterPath="$PROJECT_DIR$/Solver.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
@@ -29,7 +31,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="62" selection-start="839" selection-end="839" vertical-scroll-proportion="0.48135594" vertical-offset="192" max-vertical-offset="901">
+            <state line="27" column="34" selection-start="773" selection-end="773" vertical-scroll-proportion="0.4696707" vertical-offset="188" max-vertical-offset="1071">
               <folding>
                 <element signature="e#21#56#0" expanded="true" />
               </folding>
@@ -58,8 +60,10 @@
       <file leaf-file-name="Allocator.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Allocator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="26" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1258">
-              <folding />
+            <state line="69" column="25" selection-start="3477" selection-end="3477" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1258">
+              <folding>
+                <marker date="1448483849382" expanded="true" signature="105:3575" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,8 +80,10 @@
       <file leaf-file-name="GASolver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GASolver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="36" selection-start="2054" selection-end="2070" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="1071">
-              <folding />
+            <state line="13" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+              <folding>
+                <element signature="e#21#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,10 +91,9 @@
       <file leaf-file-name="Solver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="236" column="16" selection-start="11234" selection-end="11252" vertical-scroll-proportion="0.0" vertical-offset="3570" max-vertical-offset="4216">
+            <state line="182" column="33" selection-start="8749" selection-end="8749" vertical-scroll-proportion="0.0" vertical-offset="2738" max-vertical-offset="4233">
               <folding>
                 <element signature="e#21#37#0" expanded="true" />
-                <marker date="1448480788868" expanded="true" signature="1269:2884" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -130,6 +135,7 @@
         <option value="$PROJECT_DIR$/FSSolver.py" />
         <option value="$PROJECT_DIR$/Allocator.py" />
         <option value="$PROJECT_DIR$/Solver.py" />
+        <option value="$PROJECT_DIR$/GASolver.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -196,6 +202,7 @@
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -216,7 +223,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Allocator2.0" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="-m scoop" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -461,7 +468,9 @@
     <entry file="file://$PROJECT_DIR$/GASolver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
+          <folding>
+            <element signature="e#21#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -470,7 +479,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
             <element signature="e#21#37#0" expanded="true" />
-            <marker date="1448480788868" expanded="true" signature="1269:2884" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -517,34 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GASolver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="36" selection-start="2054" selection-end="2070" vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Allocator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="26" selection-start="3463" selection-end="3463" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SASolver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="22" selection-start="652" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="697">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="16" selection-start="11234" selection-end="11252" vertical-scroll-proportion="0.0" vertical-offset="3538" max-vertical-offset="4165">
-          <folding>
-            <element signature="e#21#37#0" expanded="true" />
-            <marker date="1448480788868" expanded="true" signature="1269:2884" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,9 +541,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Allocator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="25" selection-start="3477" selection-end="3477" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1258">
+          <folding>
+            <marker date="1448483849382" expanded="true" signature="105:3575" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GASolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <folding>
+            <element signature="e#21#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="33" selection-start="8749" selection-end="8749" vertical-scroll-proportion="0.0" vertical-offset="2738" max-vertical-offset="4233">
+          <folding>
+            <element signature="e#21#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="62" selection-start="839" selection-end="839" vertical-scroll-proportion="0.48135594" vertical-offset="192" max-vertical-offset="901">
+        <state line="27" column="34" selection-start="773" selection-end="773" vertical-scroll-proportion="0.4696707" vertical-offset="188" max-vertical-offset="1071">
           <folding>
             <element signature="e#21#56#0" expanded="true" />
           </folding>

@@ -212,11 +212,12 @@ class Solver:
         print("Fitness: ")
         self.manual_fitness(solution["result"])
 
-    def print_results_for_file(self, solution, filename, to_file = True):
+    def print_results_for_file(self, solution, filename, i, to_file = True):
         # output format:
         # method; nComponents ; nUnits ; nResources ; resPerformance ; commPerformance ; overall ; res1 ; time ; solution
         #
         result = solution["method"] + ";"
+        result += str(i) + ";"
         result += str(self.number_of_components) + ";" + str(self.number_of_units) + ";" + str(self.number_of_resources)
         allocation_performance = self.manual_fitness(solution["result"])
         result += ";" + str(allocation_performance[2]) + ";" + str(allocation_performance[1])
