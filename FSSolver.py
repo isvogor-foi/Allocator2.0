@@ -7,7 +7,7 @@ import itertools
 
 class FSSolver(Solver):
 
-    def solve(self, skip_same_platform=True, verbose=False):
+    def solve(self, skip_same_platform=False, verbose=False):
         # need to check if solution is valid!!!
         if verbose:
             print("Full space search started...")
@@ -16,8 +16,11 @@ class FSSolver(Solver):
         min_weight = -1
 
         start_time = datetime.now()
+
         for i in itertools.product([i for i in range(0, self.number_of_units)], repeat=self.number_of_components):
-            #print ("rezultat: ", i, ";  valid: ", " res: ",  self.manual_fitness(i))
+            #if self.fitness_function(i)[0] != float('inf'):
+            #print ("rezultat: ", i, ";  valid: ", " res: ",  self.fitness_function(i)[0], "min: ", min_permutation)
+
             result = None
             if skip_same_platform:
                 if not all(x == i[0] for x in i):
@@ -29,6 +32,7 @@ class FSSolver(Solver):
                 if min_weight > result or min_weight == -1:
                     min_weight = result
                     min_permutation = i
+
 
         end_time = datetime.now()
 

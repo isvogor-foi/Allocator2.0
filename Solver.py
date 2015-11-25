@@ -55,16 +55,40 @@ class Solver:
             weight = communication_weight + resource_weight
             if not self.is_solution_valid(result):
                 #weight = float('inf')
-                weight += 100000000
+                weight = 100000000000000000000000
             return weight, # must return a touple
         else:
             weight = communication_weight + resource_weight
             return [weight, communication_weight, resource_weight]
     # end method fitness_function
 
+    def manual_fitness(self, result, use_synergy=True, verbose = True):
+        resource_weight, communication_weight, weight = 0, 0, 0
+
+        for component, allocated_to in enumerate(result):
+            for resource in range(len(self.vec_trade_off_f) - 1):
+                #print("res:", resource, "allo: ", allocated_to, "comp: ", component)
+                if not use_synergy:
+                    resource_weight += self.mat_norm_resources[resource][allocated_to][component] * self.vec_trade_off_f[resource]
+                else:
+                    resource_weight += self.mat_norm_resources[resource][allocated_to][component] \
+                                         * self.vec_trade_off_f[resource] \
+                                         * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
+
+        # communication
+        for m in range(0, len(result)):
+            for n in range(m, len(result)):
+                if m != n and self.mat_norm_components[m][n] != 0:
+                    communication_weight += self.mat_norm_components[m][n] * self.mat_norm_units[result[m]][result[n]]
+
+        # communication * trade off
+        communication_weight = (communication_weight * (self.vec_trade_off_f[len(self.vec_trade_off_f) - 1]))
+
+        return [0, communication_weight, resource_weight]
+
 
     #TODO: update fitness_function when this is done
-    def manual_fitness(self, result, verbose = True):
+    def manual_fitness2(self, result, verbose = True):
         resource_weight, communication_weight = 0, 0
         resource_weight_2 = 0
 
@@ -78,8 +102,8 @@ class Solver:
                                      * self.synergy_matrix[resource][allocated_to][(result.count(allocated_to) - 1)]
 
                 # print (round(self.mat_norm_resources[resource][allocated_to][component], 4), " * ", \
-                #     round(self.vec_trade_off_f[resource], 4), " * ", \
-                #     self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to)
+                #      round(self.vec_trade_off_f[resource], 4), " * ", \
+                #      self.synergy_matrix[resource][allocated_to][result.count(allocated_to) - 1],"\t", allocated_to, "\t| hosts ", result.count(allocated_to), " -> resource: ", resource, ", allocated to: ", allocated_to)
 
         # communication
         for m in range(0, len(result)):
@@ -197,7 +221,7 @@ class Solver:
         allocation_performance = self.manual_fitness(solution["result"])
         result += ";" + str(allocation_performance[2]) + ";" + str(allocation_performance[1])
         result += ";" + str(allocation_performance[2] + allocation_performance[1])
-        result += ";" + str(allocation_performance[0])
+        #result += ";" + str(allocation_performance[0])
         result += ";" + str(self.is_solution_valid(solution["result"], False))
         result += ";" + str(solution["time"])
 
