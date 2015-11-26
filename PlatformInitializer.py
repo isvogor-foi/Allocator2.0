@@ -7,7 +7,7 @@ class PlatformInitializer:
     '''
         initialize - used to setup the input matrices, currently has mock data
     '''
-    def initialize(self, num_platforms, num_components, num_resources, min_weight, max_weight, verbose = False):
+    def initialize(self, num_platforms, num_components, num_resources, min_weight, max_weight, verbose = False, less_constraints = False):
         self.verbose = verbose;
 
         if verbose:
@@ -57,7 +57,6 @@ class PlatformInitializer:
     # vector
         self.trade_off_vector_f =  [10,1] # append
 
-    # TODO: Something is wrong with this matrix (negative results)
     # pairwise matrix (+1 for communication)
         self.pairwise_matrix = self.get_pairwise_submatix(self.num_of_resources + 1)
 
@@ -76,19 +75,29 @@ class PlatformInitializer:
 
     # preference matrix
         # 1 if must not be allocated to
-        self.preference_matrix = self.generate_random_matrix_with_more_zeros(self.num_components, 0, 2, 0.2)[:num_platforms,:num_components]
+        if less_constraints:
+            self.preference_matrix = self.generate_random_matrx(self.num_components, 0, 0, 0)[:num_platforms,:num_components]
+        else:
+            self.preference_matrix = self.generate_random_matrix_with_more_zeros(self.num_components, 0, 2, 0.2)[:num_platforms,:num_components]
         if verbose:
             print("Preference matrix: \n", self.preference_matrix)
 
     # mandatory matrix
         # 1 if must be together
-        self.mandatory_matrix = self.generate_random_matrix_with_more_zeros(self.num_components,0,2)
+        if less_constraints:
+            self.mandatory_matrix = self.generate_random_matrx(self.num_components, 0, 0, 0)
+        else:
+            self.mandatory_matrix = self.generate_random_matrix_with_more_zeros(self.num_components,0,2)
         if verbose:
             print("Mandatory matrix: \n", self.mandatory_matrix)
 
     # forbidden matrix
         # fix mandatory & forbidden matrix so they don't contradict
-        self.forbidden_matrix = self.check_logic_consistency(self.generate_random_matrix_with_more_zeros(self.num_components,0,2), self.mandatory_matrix)
+        if less_constraints:
+            self.forbidden_matrix = self.generate_random_matrx(self.num_components, 0, 0, 0)
+        else:
+            self.forbidden_matrix = self.check_logic_consistency(self.generate_random_matrix_with_more_zeros(self.num_components,0,2), self.mandatory_matrix)
+
         if verbose:
             print("Forbidden matrix: \n", self.forbidden_matrix)
 
